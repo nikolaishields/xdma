@@ -1,0 +1,13 @@
+menu "Xilinx DMA devices"
+
+config XILINX_DMA_DRIVER
+	tristate "Xilinx DMA Driver"
+	depends on PCI && (X86_64 || ARM64)
+	help
+	  This driver supports xdma-compatible devices.
+	  It is required for any of the following module(s).
+
+	  To compile this driver as a module, choose M here.  The module
+	  will be called "xdma".
+
+endmenu

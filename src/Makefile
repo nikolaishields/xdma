@@ -4,7 +4,7 @@ xdma-objs := libxdma.o xdma_cdev.o cdev_ctrl.o cdev_events.o cdev_sgdma.o cdev_x
 KVERSION := $(shell uname -r)
 
 all:
-        $(MAKE) -C /lib/modules/$(KVERSION)/build M=$(PWD) modules
+	$(MAKE) -C /lib/modules/$(KVERSION)/build M=$(PWD) modules
 
 clean:
-        $(MAKE) -C /lib/modules/$(KVERSION)/build M=$(PWD) clean
+	$(MAKE) -C /lib/modules/$(KVERSION)/build M=$(PWD) clean
